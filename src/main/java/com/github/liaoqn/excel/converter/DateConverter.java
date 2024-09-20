@@ -18,7 +18,7 @@ import java.util.regex.Pattern;
  */
 public class DateConverter extends Converter<Date> {
 
-    private static final Pattern DATE_PATTERN = Pattern.compile("^(\\d{4})[-年/](\\d{1,2})[-月/](\\d{1,2})日?\\s?((\\d{1,2})[:时点])?((\\d{1,2})[:分])?((\\d{1,2})[:秒.]?)?((\\d{1,3})(毫秒)?)?$");
+    private static final Pattern DATE_PATTERN = Pattern.compile("^(\\d{4})[-年/](\\d{1,2})[-月/](\\d{1,2})日?\\s?((\\d{1,2})[:时点]?)?((\\d{1,2})[:分]?)?((\\d{1,2})[:秒.]?)?((\\d{1,3})(毫秒)?)?$");
 
     private static final FastDateFormat DATE_FORMAT = FastDateFormat.getInstance("yyyy-MM-dd HH:mm:ss:SSS");
     private static final String DATE_STRING = "%s-%s-%s %s:%s:%s:%s";

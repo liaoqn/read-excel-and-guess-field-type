@@ -90,6 +90,11 @@ public class DateConverterTest {
         Assert.assertTrue(success);
     }
 
+    @Test
+    public void doConvertTest13() {
+        Assert.assertEquals("2016-01-02 22:11:00:000", convert("2016-1-2 22:11"));
+    }
+
     private String convert(String test) {
         Object date = dateConverter.convert(test, null);
         if (date == null) {
